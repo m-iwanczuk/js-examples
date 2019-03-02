@@ -1,0 +1,2 @@
+/* Tablice - "uporządkowany zbiór danych" */
+
