@@ -29,3 +29,53 @@ console.log(blogPost.title);
 blogPost.date = '2019-03-02';
 
 console.log(blogPost);
+
+
+/* Klasy */
+
+class Car {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+    }
+
+    printInfo() {
+        console.log(`Car's name is ${this.name}. Car's color is ${this.color}.`);
+    }
+}
+
+let bugatti = new Car('bugatti', 'red');
+let audi = new Car('audi', 'black');
+
+console.log(bugatti);
+console.log(audi);
+
+//wywołanie metody z obiektu: obiekt.metoda
+
+bugatti.printInfo();
+
+/* Napisz klasę GimUser, która będzie miala wlasciwosc height w metrach i wage w kilogramach.
+Klasa Gimuser ma metode, ktora liczy wskaznik BMI i loguje wynik obliczen.
+
+Stworz obiekt klasy GimUser o wzroscie 1.72 i wadze 74 i zaloguj jego BMI
+
+masa(kg)/wzrost(m)^2
+
+*/
+
+
+class GimUser {
+    constructor(height, weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+
+    bmiCalc() {
+        let bmi = this.weight /(this.height * this.height);
+
+        console.log(bmi);
+    }
+}
+
+let newUser = new GimUser(1.72, 74);
+newUser.bmiCalc();
